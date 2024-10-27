@@ -7,6 +7,7 @@ export default function HomePage() {
   return (
     <div className="grid grid-cols-4 gap-4">
       <div>
+      <p>Adsterra Ads Testing-1</p>
         <Banner300_250/>
       </div>
       <div>
@@ -14,6 +15,7 @@ export default function HomePage() {
         <p>Because I&apos;ve made a gaming website using Next JS, That website is ready to use Adsterra Ads, But I&apos;ve not implement Adsterra with Next JS App before.</p>
       </div>
       <div>
+        <p>Adsterra Ads Testing-2</p>
         <Banner468_60 />
       </div>
     </div>

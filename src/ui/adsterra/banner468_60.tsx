@@ -21,7 +21,10 @@ const Banner468_60 = () => {
     };
 
     useEffect(() => {
-        if (banner.current && !banner.current.firstChild) {
+        if (banner.current) {
+            // Clear any existing ad scripts to avoid conflicts
+            banner.current.innerHTML = '';
+
             const conf = document.createElement('script');
             const script = document.createElement('script');
 
@@ -30,17 +33,9 @@ const Banner468_60 = () => {
 
             script.type = 'text/javascript';
             script.src = `//www.highperformanceformat.com/${atOptions.key}/invoke.js`;
-            //!www.highperformanceformat.com/386795cf83ba9d1b8f890cf1de085519/invoke.js
 
             banner.current.appendChild(conf);
             banner.current.appendChild(script);
-
-            // Cleanup function to remove scripts when component unmounts
-            return () => {
-                if (banner.current) {
-                    banner.current.innerHTML = '';
-                }
-            };
         }
     }, [atOptions]);
 

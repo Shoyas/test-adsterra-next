@@ -14,15 +14,18 @@ const Banner300_250 = () => {
     const banner = useRef<HTMLDivElement | null>(null);
 
     const atOptions: IAtOptions = {
-		'key' : '863ed434b359def8498b93bd1e214e18',
-		'format' : 'iframe',
-		'height' : 250,
-		'width' : 300,
-		'params' : {}
-	};
+        key: '863ed434b359def8498b93bd1e214e18',
+        format: 'iframe',
+        height: 250,
+        width: 300,
+        params: {}
+    };
 
     useEffect(() => {
-        if (banner.current && !banner.current.firstChild) {
+        if (banner.current) {
+            // Clear any existing ad scripts to avoid conflicts
+            banner.current.innerHTML = '';
+
             const conf = document.createElement('script');
             const script = document.createElement('script');
 
@@ -31,17 +34,9 @@ const Banner300_250 = () => {
 
             script.type = 'text/javascript';
             script.src = `//www.highperformanceformat.com/${atOptions.key}/invoke.js`;
-            //!www.highperformanceformat.com/386795cf83ba9d1b8f890cf1de085519/invoke.js
 
             banner.current.appendChild(conf);
             banner.current.appendChild(script);
-
-            // Cleanup function to remove scripts when component unmounts
-            return () => {
-                if (banner.current) {
-                    banner.current.innerHTML = '';
-                }
-            };
         }
     }, [atOptions]);
 
