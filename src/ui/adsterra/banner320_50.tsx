@@ -2,7 +2,7 @@
 "use client";
 import { useEffect, useRef } from 'react';
 
-const Banner468_60 = () => {
+const Banner320_50 = () => {
     const banner = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
@@ -17,10 +17,10 @@ const Banner468_60 = () => {
 
             // Push the ad options to atAsyncOptions
             (window as any).atAsyncOptions.push({
-                key: 'fe7fbf5af15c840dc0303373d4b5b80d',
+                key: 'e1b71f1f3a31f690932e9c1efb4fed02',
                 format: 'js',
                 async: true,
-                container: 'atContainer-fe7fbf5af15c840dc0303373d4b5b80d',
+                container: 'atContainer-e1b71f1f3a31f690932e9c1efb4fed02',
                 params: {},
             });
 
@@ -31,7 +31,7 @@ const Banner468_60 = () => {
             script.src =
                 'http' +
                 (location.protocol === 'https:' ? 's' : '') +
-                '://www.highperformanceformat.com/fe7fbf5af15c840dc0303373d4b5b80d/invoke.js';
+                '://www.highperformanceformat.com/e1b71f1f3a31f690932e9c1efb4fed02/invoke.js';
 
             // Append the script to the head element
             document.head.appendChild(script);
@@ -48,11 +48,11 @@ const Banner468_60 = () => {
 
     return (
         <div
-            id="atContainer-fe7fbf5af15c840dc0303373d4b5b80d"
+            id="atContainer-e1b71f1f3a31f690932e9c1efb4fed02"
             className="mx-2 my-5 border border-gray-200 justify-center items-center text-white text-center"
             ref={banner}
         ></div>
     );
 };
 
-export default Banner468_60;
+export default Banner320_50;
