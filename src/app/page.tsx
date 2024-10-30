@@ -16,6 +16,7 @@ export default function HomePage() {
       </div>
       <div>
         <h1>This Next JS Project is using to implement Adsterra Ads Testing</h1>
+        <p>Source Code: https://github.com/Shoyas/test-adsterra-next</p>
       </div>
       <div>
         <p>Adsterra Ads Testing-2 Banner728_90</p>
