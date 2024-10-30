@@ -16,7 +16,6 @@ export default function HomePage() {
       </div>
       <div>
         <h1>This Next JS Project is using to implement Adsterra Ads Testing</h1>
-        <p>Because I&apos;ve made a gaming website using Next JS, That website is ready to use Adsterra Ads, But I&apos;ve not implement Adsterra with Next JS App before.</p>
       </div>
       <div>
         <p>Adsterra Ads Testing-2 Banner728_90</p>
